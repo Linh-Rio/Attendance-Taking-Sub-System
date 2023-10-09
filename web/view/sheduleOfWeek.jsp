@@ -12,33 +12,41 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css"/>
-        
+
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <h1 class="text-center">FPT University Academic Portal</h1>
-            </div>
-            <div class="row align-items-end">
-                <div class="col-6">
-                    <ul class="nav">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">                
+                <a class="navbar-brand fs-1" href="#">FPT University Academic Portal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" 
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="navbar-text">
+                            <span>linhnvhe176341</span>
+                        </li>
+                        <li class="navbar-text">
+                            <span>CAMPUS: FPTU-Hòa Lac</span>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#">logout</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">View Schedule</a>
-                        </li>
-                    </ul>                    
-                </div>
-                <div class="col-6 d-flex flex-row justify-content-end">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-primary">linhnvhe176341</button>
-                        <button type="button" class="btn btn-outline-primary">logout</button>
-                        <button type="button" class="btn btn-outline-primary">CAMPUS: FPTU-Hòa Lac</button>
-                    </div>
+                    </ul>
+
                 </div>
             </div>
-        </div>    
+        </nav>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">View Schedule</a>
+            </li>
+        </ul>     
 
         <div class="container">            
             <h2>Activities for linhnvhe176341 (Nguyễn Văn Linh)</h2>

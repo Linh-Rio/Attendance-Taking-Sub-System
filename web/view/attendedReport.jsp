@@ -1,22 +1,60 @@
 <%-- 
-    Document   : attendedReport
-    Created on : Oct 7, 2023, 1:45:13 PM
+    Document   : attendedTaking
+    Created on : Oct 6, 2023, 4:41:40 PM
     Author     : vanli
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    
+    <!-- Include Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Attendance System</h1>
+        
+        <form action="attend" method="POST">
+            <table class="table table-bordered align-middle text-center">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Group</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Status</th>
+                        <th>Comment</th>
+                        <th>Taker</th>
+                        <th>Record time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>IOT1702</td>
+                            <td>HE130430</td>
+                            <td>Ð? Mnh Hùng</td>
+                            <td>
+                                <img src="#" width="128px" height="128px"/>
+                            </td>
+                            <td class="text-danger">Absent</td>
+                            <td></td>
+                            <td>sonnt5</td>
+                            <td>1/19/2022 8:54:00</td>                            
+                        </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
 
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-
-        <script src="js/bootstrap.bundle.min.js"></script>
-
-    </body>
+    <!-- Include Bootstrap 5 JS (optional) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+
