@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.sql.Date;
 import java.util.ArrayList;
-
 /**
  *
  * @author vanli
@@ -19,16 +18,16 @@ import java.util.ArrayList;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Student extends BaseEntity {
+public class Lesson extends BaseEntity {
 
     private int id;
-    private String sCode;
-    private String name;
-    private String gender;
-    private Date dob;
-    private String phoneNum;
-    private String email;
-    private String avatar;
-    private ArrayList<Group> groups = new ArrayList<>();
+    private Date date;
+    private int index;
+    private boolean isAttendance;
+    private Instructor instructor;
+    private TimeSlot slot;
+    private Room room;
+    private Group group;
+    private ArrayList<AttendanceRecord> atts = new ArrayList<>();
 
 }

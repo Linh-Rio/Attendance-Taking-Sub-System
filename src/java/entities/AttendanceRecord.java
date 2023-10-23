@@ -4,31 +4,20 @@
  */
 package entities;
 
+import java.sql.Timestamp;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.sql.Date;
-import java.util.ArrayList;
 
-/**
- *
- * @author vanli
- */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Student extends BaseEntity {
-
-    private int id;
-    private String sCode;
-    private String name;
-    private String gender;
-    private Date dob;
-    private String phoneNum;
-    private String email;
-    private String avatar;
-    private ArrayList<Group> groups = new ArrayList<>();
-
+public class AttendanceRecord extends BaseEntity {
+    private Lesson lesson;
+    private Student student;
+    private boolean status;
+    private String description;
+    private Timestamp recordTime;
 }
