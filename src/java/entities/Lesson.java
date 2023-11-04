@@ -28,6 +28,7 @@ public class Lesson extends BaseEntity {
     private TimeSlot slot;
     private Room room;
     private Group group;
+    private Subject subject;
     private ArrayList<AttendanceRecord> atts = new ArrayList<>();
 
 }

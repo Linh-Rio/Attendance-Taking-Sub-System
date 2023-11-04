@@ -26,6 +26,6 @@ public class TimeSlot extends BaseEntity {
     private String name;
     private Time startTime;
     private Time endTime;
-    private ArrayList<Lesson> sessions = new ArrayList<>();
+    private ArrayList<Lesson> lessons = new ArrayList<>();
 
 }
