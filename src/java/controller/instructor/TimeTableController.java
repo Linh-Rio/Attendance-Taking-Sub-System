@@ -65,7 +65,7 @@ public class TimeTableController extends HttpServlet {
          request.setAttribute("to", dates.get(dates.size()-1));
          request.setAttribute("lessons", lessons);         
          
-         request.getRequestDispatcher("./view/timetable.jsp").forward(request, response);
+         request.getRequestDispatcher("../view/timetable.jsp").forward(request, response);
         
         
     } 

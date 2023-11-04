@@ -13,8 +13,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link href="../assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css"/>
 
     </head>
     <body>
@@ -68,13 +68,13 @@
         </div>
 
         <div class="container">
-            <form action="viewschedule" method="GET">
+            <form action="timetable" method="GET">
                 From <input type="date" name="from" value="${requestScope.from}"/> <br/>
                 To <input type="date" name="to" value="${requestScope.to}"/>
                 <input type="hidden" value="${param.id}" name="id"/>
                 <input type="submit" value="View"/>
             </form>
-                <table class="table-bordered">
+            <table class="table-bordered">
                 <tr>
                     <td></td>
                     <c:forEach items="${requestScope.dates}" var="d">
@@ -91,8 +91,9 @@
                             <td>
                                 <c:forEach items="${requestScope.lessons}" var="lesson">
                                     <c:if test="${lesson.slot.id eq s.id and lesson.date eq d}">
-                                        <a href="att?id=${lesson.id}"> ${lesson.group.name}-${lesson.subject.code}-${lesson.room.id}</a>
-
+                                        <a href="attendance?id=${lesson.id}"> ${lesson.group.name}-${lesson.subject.code}-${lesson.room.name}</a>
+                                        <c:if test="${lesson.isAttendance}">(attended)</c:if>
+                                        <c:if test="${!lesson.isAttendance}">(Not yet)</c:if>
                                     </c:if>
                                 </c:forEach>
                             </td>
@@ -102,6 +103,6 @@
             </table>
         </div>
 
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

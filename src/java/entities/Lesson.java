@@ -4,20 +4,14 @@
  */
 package entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 import java.sql.Date;
 import java.util.ArrayList;
 /**
  *
  * @author vanli
  */
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
+    
 public class Lesson extends BaseEntity {
 
     private int id;
@@ -30,5 +24,89 @@ public class Lesson extends BaseEntity {
     private Group group;
     private Subject subject;
     private ArrayList<AttendanceRecord> atts = new ArrayList<>();
+
+    public Lesson() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public boolean isIsAttendance() {
+        return isAttendance;
+    }
+
+    public void setIsAttendance(boolean isAttendance) {
+        this.isAttendance = isAttendance;
+    }
+
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
+    }
+
+    public TimeSlot getSlot() {
+        return slot;
+    }
+
+    public void setSlot(TimeSlot slot) {
+        this.slot = slot;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
+    public ArrayList<AttendanceRecord> getAtts() {
+        return atts;
+    }
+
+    public void setAtts(ArrayList<AttendanceRecord> atts) {
+        this.atts = atts;
+    }
+    
 
 }
