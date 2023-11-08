@@ -13,8 +13,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
-        <link href="../assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css"/>
 
     </head>
     <body>
@@ -35,7 +33,7 @@
                             <span>CAMPUS: FPTU-Hòa Lac</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">logout</a>
+                            <a class="nav-link" href="../logout">logout</a>
                         </li>
                     </ul>
 
@@ -52,7 +50,7 @@
         </ul>     
 
         <div class="container">            
-            <h2>Activities for linhnvhe176341 (Nguyễn Văn Linh)</h2>
+            <h2>Activities for linhnvhe176341 (${sessionScope.account.displayname})</h2>
             <div>
                 <p><mark>Note:</mark> These activities do not include extra-curriculum activities, such as club activities ...</p>
                 <p><mark>Chú thích:</mark> Các hoạt động trong bảng dưới không bao gồm hoạt động ngoại khóa, ví dụ như hoạt động câu lạc bộ ...</p>
@@ -103,6 +101,5 @@
             </table>
         </div>
 
-        <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
