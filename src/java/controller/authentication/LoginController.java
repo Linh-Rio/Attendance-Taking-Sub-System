@@ -61,7 +61,7 @@ public class LoginController extends HttpServlet {
             request.getRequestDispatcher("./view/login.jsp").forward(request, response);
         } else {            
             try {            
-                loggedUser.setRoles(db.getRolesAndFeatures(loggedUser.getUsername()));
+                loggedUser.setRoles(db.getRolesAndFeatures(loggedUser.getUsername()));                
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
             }

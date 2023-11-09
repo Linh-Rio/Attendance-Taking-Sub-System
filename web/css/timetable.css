@@ -7,3 +7,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : vanli
 */
 
+.timetable-container{
+    width: max(300px, 85%);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 1px solid #000;
+}
+.timetable-element{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #333;
+
+
+}
+.timetable-date{
+
+}
+
+.timetable-slot-container{
+    width: 100%;
+}
+
+.timetable-slot{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slot-index{
+    text-align: center;
+}
+
+.slot-detail{
+    display: flex;
+    flex-direction: column;
+}
