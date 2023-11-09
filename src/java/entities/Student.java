@@ -29,6 +29,7 @@ public class Student extends BaseEntity {
     private String phoneNum;
     private String email;
     private String avatar;
+    private String username;
     private ArrayList<Group> groups = new ArrayList<>();
 
 }

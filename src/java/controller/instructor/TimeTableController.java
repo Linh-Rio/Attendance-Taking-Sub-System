@@ -6,13 +6,16 @@
 package controller.instructor;
 
 
+import dal.InstructorDBContext;
 import dal.LessonDBContext;
 import dal.TimeSlotDBContext;
+import entities.Account;
+import entities.Instructor;
 import entities.Lesson;
 import entities.TimeSlot;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -35,8 +38,10 @@ public class TimeTableController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        int instructorid = 1;
-//                Integer.parseInt(request.getParameter("id"));
+        HttpSession session = request.getSession();
+        Account loggedUser = (Account) session.getAttribute("account");
+        InstructorDBContext db = new InstructorDBContext();
+        Instructor instructor = db.get(loggedUser.getUsername());
         String r_from = request.getParameter("from");
         String r_to = request.getParameter("to");
         ArrayList<Date> dates = new ArrayList<>();
@@ -58,7 +63,8 @@ public class TimeTableController extends HttpServlet {
          ArrayList<TimeSlot> slots = timeDB.list();
          
          LessonDBContext lessDB = new LessonDBContext();
-        ArrayList<Lesson> lessons = lessDB.getLessons(instructorid, dates.get(0), dates.get(dates.size()-1));         
+        ArrayList<Lesson> lessons = lessDB.getLessons(instructor.getId(), dates.get(0), dates.get(dates.size()-1)); 
+         request.setAttribute("instructor", instructor);
          request.setAttribute("slots", slots);
          request.setAttribute("dates", dates);
          request.setAttribute("from", dates.get(0));

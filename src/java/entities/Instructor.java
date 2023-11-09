@@ -27,6 +27,7 @@ public class Instructor extends BaseEntity {
     private String phoneNum;
     private String email;
     private String avatar;
+    private String username;
     private ArrayList<Lesson> sessions = new ArrayList<>();
     private ArrayList<Group> groups = new ArrayList<>();
 

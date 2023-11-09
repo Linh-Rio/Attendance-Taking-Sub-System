@@ -22,7 +22,7 @@
         </div>
         <div>     
             <div>
-                <h2>Activities for ${sessionScope.account.username}</h2>
+                <h2>Activities for ${requestScope.instructor.username} (${requestScope.instructor.name})</h2>
             </div>
             <div>
                 <p><mark>Note:</mark> These activities do not include extra-curriculum activities, such as club activities ...</p>
@@ -44,7 +44,6 @@
                     <input type="date" name="from" value="${requestScope.from}"/> 
                     <lable>To</lable>  
                     <input type="date" name="to" value="${requestScope.to}"/>
-                    <input type="hidden" value="${param.id}" name="id"/>
                     <input type="submit" value="View" class="view-btn"/>
                     
                 </div>
