@@ -79,7 +79,7 @@ public class AttendanceController extends HttpServlet {
         lesson.setAtts(atts);
         LessonDBContext lessonDB = new LessonDBContext();
         lessonDB.addAttendances(lesson);
-        response.getWriter().println("done");
+        response.sendRedirect("./timetable");
     }
 
     /** 

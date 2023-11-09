@@ -6,4 +6,61 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : Nov 8, 2023, 9:39:20 PM
     Author     : vanli
 */
+body{
+    padding: 0 10%;
+}
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.logo-image{
+    width: 186px;
+    height: 58px;
+}
+
+.timetable-btn{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+.timetable-btn:hover {
+    color: orange;
+    background-color: white;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th{
+    padding: 10px 0;
+    background-color: orange;
+    color: white;
+}
+
+td:first-child{
+    text-align: left;
+}
+
+td{
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.input-des{
+    width: 100%;
+    border: none;
+    outline: none;
+}
