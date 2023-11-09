@@ -6,12 +6,60 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : Nov 8, 2023, 7:08:24 PM
     Author     : vanli
 */
+body {
+    margin: 0 0 0 10%;
+    padding: 15px 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.logo-image{
+    width: 186px;
+    height: 58px;
+}
+
+.logout-btn{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 7px 15px;
+    border-radius: 5px;
+    
+}
+
+.logout-btn:hover {
+    color: orange;
+    background-color: white;
+}
+
+input{
+    padding: 10px;
+    border: none;
+}
+.view-btn{
+    padding: 7px 15px;
+    background-color: #0000ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    color: #0000ff;
+    background-color: white;
+}
 
 .timetable-container{
-    width: max(300px, 85%);
+    margin-top: 15px;
+    width: max(300px, 90%);
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    border: 1px solid #000;
+    gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 .timetable-element{
     display: flex;
@@ -19,31 +67,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    border: 1px solid #333;
-
-
+    background-color: orange;
+    color: #fff;
 }
 .timetable-date{
+    width: 100%;
+    text-align: center;
+    background-color: #0066ff;
 
 }
 
 .timetable-slot-container{
     width: 100%;
+    
+}
+.a-link-subject{
+    text-decoration: none;
+    color: #fff;
 }
 
+.a-link-subject:hover {
+    color: #0066ff;
+}
 .timetable-slot{
     width: 100%;
     text-align: left;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    /*justify-content: center;*/
+    /*flex-wrap: wrap-reverse;*/
+    /*justify-content: space-evenly;*/
+    padding: 5px;
 }
 
 .slot-index{
+    min-width: 60px;
     text-align: center;
+    margin: 0 5px;
 }
 
 .slot-detail{
+    /*min-width: 95px;*/
     display: flex;
     flex-direction: column;
 }
+
+
